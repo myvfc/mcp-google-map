@@ -1,19 +1,18 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/cli.js",
-      "use": "@vercel/node"
+  "functions": {
+    "dist/cli.js": {
+      "runtime": "@vercel/node"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/mcp",
-      "dest": "dist/cli.js"
+      "source": "/mcp",
+      "destination": "/api/mcp"
     },
     {
-      "src": "/(.*)",
-      "dest": "dist/cli.js"
+      "source": "/",
+      "destination": "/api/index"
     }
   ]
 }
