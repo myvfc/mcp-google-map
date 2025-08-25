@@ -12,7 +12,7 @@
     "dist/**/*.map",
     "README.md"
   ],
-  "scripts": {
+
  "scripts": {
   "build": "tsup --dts",
   "prestart": "npm run build",
