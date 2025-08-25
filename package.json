@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "build": "tsup --dts",
-    "start": "node dist/cli.js",
+    "prestart": "npm run build",
+    "start": "node dist/cli.js -p $PORT -k $GOOGLE_MAPS_API_KEY",
     "dev": "cross-env NODE_ENV=development tsup --watch",
     "prepublishOnly": "npm run build"
   },
