@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/cli.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/mcp",
+      "dest": "dist/cli.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/cli.js"
+    }
+  ]
+}
